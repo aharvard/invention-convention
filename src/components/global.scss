@@ -1,0 +1,22 @@
+@import "./variables.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800|Sanchez");
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: Sanchez, serif;
+  color: $primary-color;
+  font-weight: 400;
+  font-size: 3.375em;
+  line-height: 1;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  text-align: center;
+}
