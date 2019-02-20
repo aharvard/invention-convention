@@ -9,10 +9,11 @@ export const Form = () => (
     name="partner-form"
     method="post"
     data-netlify="true"
-    data-netlify-honeypot="bot-field"
+    // data-netlify-honeypot="bot-field"
     action="/page-2/"
     id="partnerForm"
   >
+    <input type="hidden" name="partner-form" value="partner-form" />
     <div className="field">
       <label htmlFor="name">Name</label>
       <input id="name" type="text" name="name" placeholder="First Last" />
