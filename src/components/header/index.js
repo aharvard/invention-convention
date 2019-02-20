@@ -6,9 +6,9 @@ import "./style.scss";
 
 const Header = ({ siteTitle }) => (
   <header className="header">
-    <h1>
+      
       <Link to="/">{siteTitle}</Link>
-    </h1>
+    
   </header>
 );
 

@@ -9,7 +9,6 @@ export const Form = () => (
     name="partnerForm"
     method="post"
     data-netlify="true"
-    // data-netlify-honeypot="bot-field"
     action="/page-2/"
     id="partnerForm"
   >
