@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from "gatsby";
 import "./remedy.scss";
 
 import Header from "./header";
-import Footer from "./footer";
+// import Footer from "./footer";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -24,7 +24,7 @@ const Layout = ({ children }) => (
 
         <main>{children}</main>
 
-        <Footer />
+        {/* <Footer /> */}
       </>
     )}
   />
