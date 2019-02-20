@@ -1,5 +1,3 @@
-@import "./variables.scss";
-
 /* This project is under construction. It's not ready for release yet. As of Feb 11, 2019. */
 
 * {
@@ -23,7 +21,6 @@ body {
 h1 {
   font-size: 2rem; /* Make all H1 large, remove nested-shrinking sizes. */
   margin: 0.67em 0;
-  color: $secondary-color;
 }
 h2 {
   font-size: 1.5rem;

@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 
-import "./_remedy.scss";
+import "./remedy.scss";
 
-import Header from "./Header";
+import Header from "./header";
 import Footer from "./footer";
 
 const Layout = ({ children }) => (
