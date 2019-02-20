@@ -2,18 +2,18 @@
 // import PropTypes from "prop-types"
 import React from "react";
 
-import "./Form.scss";
+import "./style.scss";
 
 export const Form = () => (
   <form
-    name="partner-form"
+    name="partnerForm"
     method="post"
     data-netlify="true"
     // data-netlify-honeypot="bot-field"
     action="/page-2/"
     id="partnerForm"
   >
-    <input type="hidden" name="partner-form" value="partner-form" />
+    <input type="hidden" name="partnerForm" value="partnerForm" />
     <div className="field">
       <label htmlFor="name">Name</label>
       <input id="name" type="text" name="name" placeholder="First Last" />
