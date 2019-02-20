@@ -2,33 +2,42 @@
 // import PropTypes from "prop-types"
 import React from "react";
 
+import "./Form.scss";
+
 export const Form = () => (
   <form
-    name="contact"
+    name="partner-form"
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     action="/page-2/"
+    id="partnerForm"
   >
-    {/* You still need to add the hidden input with the form name to your JSX form */}
-    <input type="hidden" name="form-name" value="contact" />
-    <p>
-      <label>
-        Your Name: <input type="text" name="name" />
-      </label>
-    </p>
-    <p>
-      <label>
-        Your Email: <input type="email" name="email" />
-      </label>
-    </p>
-    <p>
-      <label>
-        Message: <textarea name="message" />
-      </label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
+    <div className="field">
+      <label htmlFor="name">Name</label>
+      <input id="name" type="text" name="name" placeholder="First Last" />
+    </div>
+
+    <div className="field">
+      <label htmlFor="email">Email</label>
+      <input id="email" type="email" name="email" />
+    </div>
+
+    <div className="field">
+      <label htmlFor="phone">Phone</label>
+      <input id="phone" type="phone" name="phone" />
+    </div>
+
+    <div className="field">
+      <label htmlFor="business">Business Name</label>
+      <input id="business" type="business" name="business" />
+    </div>
+
+    <div className="field">
+      <label htmlFor="logo">Company Logo</label>
+      <input id="logo" type="file" name="logo" />
+    </div>
+
+    <button type="submit">Send</button>
   </form>
 );
