@@ -4,11 +4,14 @@ import React from "react";
 
 import "./style.scss";
 
+import Sparky from "../sparky";
+
 const Header = ({ siteTitle }) => (
   <header className="header">
-      
-      <Link to="/">{siteTitle}</Link>
-    
+    <Sparky />
+    <Link to="/" className="header-link">
+      {siteTitle}
+    </Link>
   </header>
 );
 

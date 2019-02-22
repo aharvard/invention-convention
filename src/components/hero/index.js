@@ -3,20 +3,12 @@ import React from "react";
 
 import "./style.scss";
 
-const Hero = ({ children }) => (
-  <div className="Hero">
-      
-      {children}
-    
-  </div>
-);
+const Hero = ({ children }) => <div className="hero">{children}</div>;
 
 Hero.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-Hero.defaultProps = {
-
-};
+Hero.defaultProps = {};
 
 export default Hero;

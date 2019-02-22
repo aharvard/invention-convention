@@ -1,12 +1,27 @@
 @import "../variables.scss";
 
 .header {
-  background: $secondary-color;
   margin: 0;
   padding: 1rem;
-  color: white;
+  display: flex;
+  align-items: center;
 
-  a {
-    color: white;
+  .sparky {
+    font-size: 4rem;
+    filter: drop-shadow(-2px 2px 1px rgba(0, 0, 0, 0.2));
+
+    & + .header-link {
+      margin-left: 1rem;
+    }
   }
+}
+
+.header-link {
+  flex: 0 0 auto;
+  font-family: $heading;
+  text-decoration: none;
+  color: $dark-gray;
+  font-size: $heading-size-0;
+  line-height: 1;
+  padding-top: 0.35em;
 }

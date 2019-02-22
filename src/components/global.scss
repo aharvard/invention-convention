@@ -1,20 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans:400,800");
 @import "./variables.scss";
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800|Sanchez");
+html {
+  font-size: 100%;
+
+  @media (max-width: 500px) {
+    font-size: 90%;
+  }
+}
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: $body;
+  color: $dark-gray;
+  background: $primary-color;
 }
 
 h1 {
-  font-family: Sanchez, serif;
-  color: $primary-color;
-  font-weight: 400;
-  font-size: 3.375em;
+  font-family: $heading;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: $heading-size-1;
   line-height: 1;
 }
 
 main {
-  display: grid;
-  place-items: center;
+  padding: 1rem;
+  background: white;
+}
+
+a {
+  color: $primary-compliment;
 }
