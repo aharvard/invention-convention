@@ -1,0 +1,12 @@
+@import "../variables.scss";
+
+.header {
+  background: $secondary-color;
+  margin: 0;
+  padding: 1rem;
+  color: white;
+
+  a {
+    color: white;
+  }
+}
