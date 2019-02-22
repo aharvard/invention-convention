@@ -34,7 +34,7 @@ const Form = () => {
       <input type="hidden" name="partnerForm" value="partnerForm" />
 
       <div className="field">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Your Name</label>
         <input
           id="name"
           name="name"
