@@ -21,13 +21,62 @@ h1 {
   text-transform: uppercase;
   font-size: $heading-size-1;
   line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-family: $heading;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: $heading-size-0;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 main {
-  padding: 1rem;
   background: white;
+}
+
+section {
+  max-width: 75rem;
+  padding: 2rem;
+  margin: 0 auto;
 }
 
 a {
   color: $primary-compliment;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+
+  & + & {
+    margin-top: 1rem;
+  }
+
+  &.loud {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+}
+
+// layout
+
+.partnership-lead-section {
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: space-between;
+
+  div:first-child {
+    outline: 1px solid;
+    flex: 0 1 700px;
+  }
+
+  div:last-child {
+    outline: 1px solid red;
+    flex: 0 0 300px;
+  }
 }
