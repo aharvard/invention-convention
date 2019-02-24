@@ -6,7 +6,7 @@ import {
   IconExhibits,
   IconMoney,
   IconPeople
-} from "../components/Icons";
+} from "../components/icons";
 import Layout from "../components/layout";
 import PartnerCard from "../components/partner-card";
 import SEO from "../components/seo";
