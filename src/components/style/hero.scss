@@ -15,6 +15,10 @@
     align-self: flex-start;
     justify-self: flex-end;
     margin: 2rem 2rem 0 0;
+
+    @media (max-height: 500px) {
+      font-size: 5rem;
+    }
   }
 }
 
@@ -22,7 +26,7 @@
   height: 90vh;
   width: 100%;
 
-  @media (max-height: 800px) {
+  @media (max-height: 500px) {
     height: initial;
   }
 }

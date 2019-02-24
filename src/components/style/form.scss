@@ -33,7 +33,6 @@
   @media (max-width: 800px) {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    outline: 1px solid red;
 
     button {
       grid-column: 1 / 2;
