@@ -21,6 +21,7 @@ const Form = ({ testFormProp }) => {
     if (level === "levelOne") {
       return `/page-2`;
     }
+    return "";
   };
 
   return (
@@ -105,15 +106,10 @@ const Form = ({ testFormProp }) => {
                   <input id="business" type="business" name="business" />
                 </div>
 
-                {/* <div className="field">
-                  <label htmlFor="logo">Company Logo</label>
-                  <input id="logo" type="file" name="logo" />
-                </div> */}
-
                 <fieldset>
                   <legend>Would you like to run your own exhibit booth?</legend>
 
-                  <div>
+                  <div className="radio">
                     <input
                       type="radio"
                       id="contactChoice1"
@@ -125,7 +121,7 @@ const Form = ({ testFormProp }) => {
                     </label>
                   </div>
 
-                  <div>
+                  <div className="radio">
                     <input
                       type="radio"
                       id="contactChoice2"
@@ -138,7 +134,7 @@ const Form = ({ testFormProp }) => {
                     </label>
                   </div>
 
-                  <div>
+                  <div className="radio">
                     <input
                       type="radio"
                       id="contactChoice3"

@@ -1,14 +1,20 @@
 @import "./variables.scss";
 
+.form-section-wrapper {
+  background: $primary-color;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+
+  h2 {
+    margin-bottom: 3rem;
+  }
+}
+
 #partnerForm {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   grid-gap: 2rem;
-}
-
-.form-section-wrapper {
-  background: $primary-color;
-  padding: 20rem 0;
 }
 
 .field {
@@ -34,6 +40,43 @@
 
     &:focus {
       box-shadow: 0 0 0 3px $primary-compliment;
+    }
+  }
+}
+
+fieldset {
+  border: none;
+  outline: none;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  label {
+    cursor: pointer;
+  }
+  input {
+    flex: 0 0 auto;
+    appearance: none;
+    border-radius: 50%;
+    background: white;
+    width: 2rem;
+    height: 2rem;
+    transition: 250ms border ease;
+    outline: none;
+    cursor: pointer;
+    margin-right: 1rem;
+    border: 10px solid white;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $primary-color, 0 0 0 6px $primary-compliment;
+    }
+
+    &:checked {
+      border: 6px solid white;
+      background: $primary-compliment;
     }
   }
 }
