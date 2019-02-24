@@ -6,6 +6,7 @@ import Footer from "./footer";
 
 import "./style/remedy.scss";
 import "./style/global.scss";
+import "./style/sections.scss";
 
 const Layout = ({ children }) => (
   <StaticQuery

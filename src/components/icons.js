@@ -1,5 +1,5 @@
 import React from "react";
-import "./style/icon.scss";
+import "./style/icons.scss";
 
 export const IconAward = () => (
   <svg
@@ -100,6 +100,21 @@ export const IconExhibits = () => (
     <path
       className="stroke"
       d="M13.75,6.75h-9a.75.75,0,0,0-.624,1.166l1.248.895.126.245V21.75A1.5,1.5,0,0,0,7,23.25H18.25a1.5,1.5,0,0,0,1.5-1.5V11.25"
+    />
+  </svg>
+);
+
+export const IconDownArrow = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="icon"
+    height="1em"
+    width="1em"
+    viewBox="0 0 24 24"
+  >
+    <path
+      className="fill"
+      d="M.249,7.207,11.233,19.678h0a1.066,1.066,0,0,0,1.539,0L23.751,7.207a.987.987,0,0,0-.107-1.414l-1.85-1.557a1.028,1.028,0,0,0-1.438.111L12.191,13.8a.25.25,0,0,1-.379,0L3.644,4.346A1.021,1.021,0,0,0,2.948,4a1,1,0,0,0-.741.238L.356,5.793A.988.988,0,0,0,0,6.478.978.978,0,0,0,.249,7.207Z"
     />
   </svg>
 );

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IconDownArrow } from "./icons";
 import "./style/form.scss";
 
 const Form = ({ testFormProp }) => {
@@ -27,7 +28,7 @@ const Form = ({ testFormProp }) => {
   return (
     <div className="form-section-wrapper">
       <section>
-        <h2>Partnership Signup</h2>
+        <h2>Partner Signup</h2>
         <form
           name="partnerForm"
           method="post"
@@ -35,7 +36,7 @@ const Form = ({ testFormProp }) => {
           action={action}
           id="partnerForm"
         >
-          <div>
+          <div className="form-section">
             <h3>1. Contact Info</h3>
             <input type="hidden" name="partnerForm" value="partnerForm" />
 
@@ -79,11 +80,11 @@ const Form = ({ testFormProp }) => {
             </div>
           </div>
 
-          <div>
-            <h3>2. Partnership Details</h3>
+          <div className="form-section">
+            <h3>2. Partner Details</h3>
             <div className="field">
               <label htmlFor="level">Partnership Level</label>
-              <div className="customSelect">
+              <div className="select">
                 <select
                   id="level"
                   value={level}
@@ -97,6 +98,7 @@ const Form = ({ testFormProp }) => {
                   <option value="levelTwo">$500 – Prodigy</option>
                   <option value="levelThree">$750 – Professor</option>
                 </select>
+                <IconDownArrow />
               </div>
             </div>
             {level === "levelTwo" && (
@@ -150,7 +152,7 @@ const Form = ({ testFormProp }) => {
             )}
           </div>
 
-          <button type="submit">Submit</button>
+          <button type="submit">Submit & Make Payment</button>
         </form>
       </section>
     </div>

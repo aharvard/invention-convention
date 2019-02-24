@@ -1,0 +1,21 @@
+.partnership-lead-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-top: 4rem;
+
+  @media (max-width: 800px) {
+    display: block;
+    div:last-child {
+      margin-top: 3rem;
+    }
+  }
+
+  div:first-child {
+    flex: 0 1 600px;
+  }
+
+  div:last-child {
+    flex: 0 0 auto;
+  }
+}

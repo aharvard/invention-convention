@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 
 .form-section-wrapper {
   background: $primary-color;
@@ -8,23 +9,44 @@
 
   h2 {
     margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  section {
+    width: 100%;
   }
 }
 
 #partnerForm {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 4rem 5rem;
+
+  button {
+    @include buttonColor($primary-compliment, $primary-color);
+
+    justify-self: center;
+    grid-column: 1 / 3;
+  }
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    outline: 1px solid red;
+
+    button {
+      grid-column: 1 / 2;
+    }
+  }
+}
+
+.form-section {
+  // outline: 1px solid;
 }
 
 .field {
   margin-bottom: 1rem;
-
-  label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
 
   input,
   select {
@@ -40,13 +62,44 @@
 
     &:focus {
       box-shadow: 0 0 0 3px $primary-compliment;
+      outline: none;
     }
   }
+}
+
+label,
+legend {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 fieldset {
   border: none;
   outline: none;
+  margin: 0;
+  padding: 0;
+
+  legend {
+    padding: 1rem 0 0.5rem;
+  }
+}
+
+.select {
+  position: relative;
+  cursor: pointer;
+
+  select {
+    cursor: pointer;
+  }
+
+  svg {
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+    color: $primary-compliment;
+    font-size: 1rem;
+  }
 }
 
 .radio {
@@ -54,24 +107,31 @@ fieldset {
   align-items: center;
   margin-bottom: 1rem;
 
+  // outline: 1px dashed;
+
   label {
     cursor: pointer;
+    font-weight: 400;
+    // outline: 1px solid;
+    margin-bottom: 0;
   }
   input {
     flex: 0 0 auto;
     appearance: none;
     border-radius: 50%;
     background: white;
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     transition: 250ms border ease;
-    outline: none;
     cursor: pointer;
     margin-right: 1rem;
     border: 10px solid white;
+    // outline: 1px solid;
 
     &:focus {
-      box-shadow: 0 0 0 3px $primary-color, 0 0 0 6px $primary-compliment;
+      // box-shadow: 0 0 0 3px $primary-color, 0 0 0 6px $primary-compliment;
+      box-shadow: 0 0 0 3px $primary-compliment;
+      outline: none;
     }
 
     &:checked {

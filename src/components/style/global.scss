@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans:300,600");
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans:300,400,600");
 @import "./variables.scss";
+@import "./mixins.scss";
 
 html {
   font-size: 100%;
@@ -98,50 +99,27 @@ p + p {
 
 button,
 .button {
-  background: $primary-compliment;
+  @include buttonColor($primary-compliment, white);
+
   border: 3px solid $black;
   color: white;
   font-family: $heading;
-  padding: 0.75em 1.2em 0.5em;
-  font-size: $body-size-1;
+  padding: 0.75em 1em 0.5em;
+  font-size: 1.4rem;
   letter-spacing: 0.1em;
   border-radius: 3px;
   cursor: pointer;
-  box-shadow: 3px 3px white, 6px 6px 0 $black;
   transition: all 250ms ease;
+  display: inline-block;
+  text-transform: uppercase;
 
   &:hover,
   &:focus {
-    box-shadow: 0 0 white, 4px 4px 0 $black;
     transform: translateY(3px) translateX(3px);
+    outline: none;
   }
 
   &:active {
-    box-shadow: 0 0 white, 0 0 0 $black;
     transform: translateY(6px) translateX(6px);
-  }
-}
-
-// layout
-
-.partnership-lead-section {
-  display: flex;
-  justify-content: space-between;
-  gap: 4rem;
-  margin-top: 4rem;
-
-  @media (max-width: 800px) {
-    display: block;
-    div:last-child {
-      margin-top: 3rem;
-    }
-  }
-
-  div:first-child {
-    flex: 0 1 600px;
-  }
-
-  div:last-child {
-    flex: 0 0 auto;
   }
 }
