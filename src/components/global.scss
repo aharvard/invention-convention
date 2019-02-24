@@ -30,6 +30,16 @@ h2 {
   font-family: $heading;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  font-size: $heading-size-1;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-family: $heading;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   font-size: $heading-size-0;
   line-height: 1;
   margin-top: 0;
@@ -84,6 +94,31 @@ p + p {
 .loud {
   font-size: $body-size-2;
   font-weight: 200;
+}
+
+button {
+  background: $primary-compliment;
+  border: 3px solid $black;
+  color: white;
+  font-family: $heading;
+  padding: 0.75em 1.2em 0.5em;
+  font-size: $body-size-1;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 3px 3px white, 6px 6px 0 $black;
+  transition: all 250ms ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 white, 4px 4px 0 $black;
+    transform: translateY(3px) translateX(3px);
+  }
+
+  &:active {
+    box-shadow: 0 0 white, 0 0 0 $black;
+    transform: translateY(6px) translateX(6px);
+  }
 }
 
 // layout

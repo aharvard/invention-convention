@@ -1,16 +1,13 @@
 import React from "react";
-
-import SEO from "../components/seo";
-import Layout from "../components/layout";
 import Form from "../components/form";
-import Logo from "../components/logo";
-
 import Hero from "../components/hero";
-import PartnerCard from "../components/partner-card";
-import IconPeople from "../components/icons/IconPeople";
-import IconExhibits from "../components/icons/IconExhibits";
 import IconAward from "../components/icons/IconAward";
+import IconExhibits from "../components/icons/IconExhibits";
 import IconMoney from "../components/icons/IconMoney";
+import IconPeople from "../components/icons/IconPeople";
+import Layout from "../components/layout";
+import PartnerCard from "../components/partner-card";
+import SEO from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
@@ -20,7 +17,7 @@ const IndexPage = () => (
 
     <section className="partnership-lead-section">
       <div>
-        <h1>Become a Partner</h1>
+        <h2>Become a Partner</h2>
         <p className="loud">
           Cookeville Children’s Museum is hosting the 3rd annual Invention
           Convention.
@@ -35,7 +32,7 @@ const IndexPage = () => (
         </p>
       </div>
       <div>
-        <h2>Last Year</h2>
+        <h3>Last Year</h3>
         <ul>
           <li>
             <IconPeople />
@@ -65,6 +62,7 @@ const IndexPage = () => (
           <li>Name printed on event materials</li>
           <li>Shout-outs on Social Media</li>
         </ul>
+        <button>Sign Me Up!</button>
       </PartnerCard>
       <PartnerCard
         levelName="Professor"
@@ -74,9 +72,12 @@ const IndexPage = () => (
         <ul>
           <li>Name printed on event materials</li>
           <li>Shout-outs on Social Media</li>
-          <li>Shout-outs on Social Media</li>
-          <li>Shout-outs on Social Media</li>
+          <li>Community outreach opportunity</li>
+          <li>
+            Hands-on exhibition booth (run your own or sponsor one of ours)
+          </li>
         </ul>
+        <button>Sign Me Up!</button>
       </PartnerCard>
       <PartnerCard
         levelName="Innovator"
@@ -84,15 +85,19 @@ const IndexPage = () => (
         levelDescription="Great for companies or organizations that want to be recognized as a financial partner"
       >
         <ul>
-          <li>Name printed on event materials</li>
-          <li>Shout-outs on Social Media</li>
-          <li>Shout-outs on Social Media</li>
-          <li>Shout-outs on Social Media</li>
-          <li>Shout-outs on Social Media</li>
-          <li>Shout-outs on Social Media</li>
+          <li>Name (and logo) printed on event materials</li>
+          <li>Shoutouts on Social Media</li>
+          <li>Community outreach opportunity</li>
+          <li>
+            Event co-branding, associating your brand with the Invention
+            Convention
+          </li>
+          <li>Space in lobby for promoting your organization </li>
         </ul>
+        <button>Sign Me Up!</button>
       </PartnerCard>
     </section>
+    <Form />
     {/* <p>
         Invention Convention is a free, educational S.T.E.M. event designed for
         kids and their families!

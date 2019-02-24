@@ -37,5 +37,21 @@
 }
 
 .partner-card-body {
-  padding: 1rem;
+  padding: 2rem;
+
+  h3 {
+    font-family: $heading;
+    letter-spacing: 0.05em;
+    font-size: $body-size-1;
+    margin-top: 0;
+  }
+
+  li {
+    font-size: $body-size-0;
+  }
+
+  button {
+    display: flex;
+    margin: 2rem auto 1.5rem;
+  }
 }

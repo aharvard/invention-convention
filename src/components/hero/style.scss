@@ -21,16 +21,27 @@
 .gatsby-image-wrapper {
   height: 90vh;
   width: 100%;
+
+  @media (max-height: 800px) {
+    height: initial;
+  }
 }
 
 .hero-title {
   font-size: 13vw;
   line-height: 0.8;
   transform: translateY(4vw);
-  z-index: 1;
+  z-index: 2;
   color: white;
   margin-left: 1rem;
   align-self: flex-end;
+
+  @media (max-width: 900px) {
+    transform: translateY(4.5vw);
+  }
+  @media (max-width: 600px) {
+    transform: translateY(5vw);
+  }
 
   @media (min-width: 1500px) {
     font-size: 12rem;
