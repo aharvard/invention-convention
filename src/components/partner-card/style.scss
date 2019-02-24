@@ -3,7 +3,12 @@
 .partnership-levels-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 2rem;
+  align-items: center;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .partner-card {
@@ -12,8 +17,13 @@
 
 .partner-card-header {
   background: $primary-color;
-  padding: 1rem;
+  padding: 3rem 1rem;
   text-align: center;
+  p {
+    font-size: $body-size-0;
+    font-weight: 600;
+    margin: 0 2rem;
+  }
 }
 
 .partner-card-level-name {

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans:400,800");
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans:300,600");
 @import "./variables.scss";
 
 html {
@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: $body;
+
   color: $dark-gray;
   background: $primary-color;
 }
@@ -45,6 +46,27 @@ section {
   margin: 0 auto;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+  margin-bottom: 1rem;
+  display: inline-block;
+  font-size: $body-size-1;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+
+  .icon {
+    margin-right: 1rem;
+    font-size: 1.3em;
+    vertical-align: center;
+  }
+}
+
 a {
   color: $primary-compliment;
 }
@@ -52,31 +74,38 @@ a {
 p {
   margin: 0;
   line-height: 1.5;
+  font-size: $body-size-1;
+}
 
-  & + & {
-    margin-top: 1rem;
-  }
+p + p {
+  margin-top: 1rem;
+}
 
-  &.loud {
-    font-size: 1.5rem;
-    font-weight: 200;
-  }
+.loud {
+  font-size: $body-size-2;
+  font-weight: 200;
 }
 
 // layout
 
 .partnership-lead-section {
   display: flex;
-  // flex-wrap: wrap;
   justify-content: space-between;
+  gap: 4rem;
+  margin-top: 4rem;
+
+  @media (max-width: 800px) {
+    display: block;
+    div:last-child {
+      margin-top: 3rem;
+    }
+  }
 
   div:first-child {
-    outline: 1px solid;
-    flex: 0 1 700px;
+    flex: 0 1 600px;
   }
 
   div:last-child {
-    outline: 1px solid red;
-    flex: 0 0 300px;
+    flex: 0 0 auto;
   }
 }

@@ -8,18 +8,37 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
-}
 
-.logo {
-  z-index: 1;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 0 1rem;
+  .sparky {
+    z-index: 1;
+    font-size: 10rem;
+    align-self: flex-start;
+    justify-self: flex-end;
+    margin: 2rem 2rem 0 0;
+  }
 }
 
 .gatsby-image-wrapper {
   height: 90vh;
   width: 100%;
+}
+
+.hero-title {
+  font-size: 13vw;
+  line-height: 0.8;
+  transform: translateY(4vw);
+  z-index: 1;
+  color: white;
+  margin-left: 1rem;
+  align-self: flex-end;
+
+  @media (min-width: 1500px) {
+    font-size: 12rem;
+    transform: translateY(3.5rem);
+    margin-left: 5rem;
+  }
+}
+
+.hero-title-year {
+  display: block;
 }

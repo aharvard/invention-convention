@@ -5,37 +5,53 @@ import Layout from "../components/layout";
 import Form from "../components/form";
 import Logo from "../components/logo";
 
-import { ImageExhibitGym } from "../components/images";
 import Hero from "../components/hero";
 import PartnerCard from "../components/partner-card";
+import IconPeople from "../components/icons/IconPeople";
+import IconExhibits from "../components/icons/IconExhibits";
+import IconAward from "../components/icons/IconAward";
+import IconMoney from "../components/icons/IconMoney";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`stem`, `upper cumberland`, `cookeville`]} />
 
-    <Hero>
-      <Logo />
-      <ImageExhibitGym className="hero-image" />
-    </Hero>
+    <Hero titleYear="2019" title="Invention Convention Partnership" />
 
     <section className="partnership-lead-section">
       <div>
-        <h1>Partner with us!</h1>
+        <h1>Become a Partner</h1>
         <p className="loud">
-          The Cookeville Children’s Museum is hosting their 3rd annual Invention
-          Convention
+          Cookeville Children’s Museum is hosting the 3rd annual Invention
+          Convention.
         </p>
         <p>
-          Upper Cumberland’s premier S.T.E.M. event design for kids and their
-          families
+          Upper Cumberland’s premier S.T.E.M. event designed to be free for kids
+          and their families.
+        </p>
+        <p>
+          Contributions to made directly benefit Cookeville Children’s Museum
+          and are tax-deductible.
         </p>
       </div>
       <div>
         <h2>Last Year</h2>
         <ul>
-          <li>Over 400 people attended</li>
-          <li>10 exhibits & 4 competition</li>
-          <li>Rased over $13,000</li>
+          <li>
+            <IconPeople />
+            Over 400 people attended
+          </li>
+          <li>
+            <IconExhibits />
+            10 hands-on exhibits
+          </li>
+          <li>
+            <IconAward />4 competitions
+          </li>
+          <li>
+            <IconMoney />
+            Rased over $13,000
+          </li>
         </ul>
       </div>
     </section>
@@ -58,13 +74,24 @@ const IndexPage = () => (
         <ul>
           <li>Name printed on event materials</li>
           <li>Shout-outs on Social Media</li>
+          <li>Shout-outs on Social Media</li>
+          <li>Shout-outs on Social Media</li>
         </ul>
       </PartnerCard>
       <PartnerCard
         levelName="Innovator"
         levelAmount="$750"
         levelDescription="Great for companies or organizations that want to be recognized as a financial partner"
-      />
+      >
+        <ul>
+          <li>Name printed on event materials</li>
+          <li>Shout-outs on Social Media</li>
+          <li>Shout-outs on Social Media</li>
+          <li>Shout-outs on Social Media</li>
+          <li>Shout-outs on Social Media</li>
+          <li>Shout-outs on Social Media</li>
+        </ul>
+      </PartnerCard>
     </section>
     {/* <p>
         Invention Convention is a free, educational S.T.E.M. event designed for

@@ -1,14 +1,23 @@
-import PropTypes from "prop-types";
 import React from "react";
+import { ImageExhibitGym } from "../images";
+import Sparky from "../sparky/index";
 
 import "./style.scss";
 
-const Hero = ({ children }) => <div className="hero">{children}</div>;
+const Hero = ({ children, title, titleYear }) => (
+  <div className="hero">
+    <ImageExhibitGym />
+    <h1 className="hero-title">
+      <span className="hero-title-year">{titleYear}</span>
+      {title}
+    </h1>
+    <Sparky />
+  </div>
+);
 
-Hero.propTypes = {
-  children: PropTypes.node.isRequired
+Hero.defaultProps = {
+  title: "title",
+  titleYear: "2019"
 };
-
-Hero.defaultProps = {};
 
 export default Hero;
