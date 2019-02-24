@@ -1,6 +1,9 @@
+@import "./variables.scss";
+
 .partnership-lead-section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 4rem;
   margin-top: 4rem;
 
@@ -17,5 +20,15 @@
 
   div:last-child {
     flex: 0 0 auto;
+    ul {
+      margin-bottom: 2rem;
+    }
   }
+}
+
+.partnership-sign-up-prompt {
+  text-align: center;
+  font-family: $heading;
+  font-size: $heading-size-1;
+  margin: 3rem auto;
 }

@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "../components/form";
 import Hero from "../components/hero";
 import {
   IconAward,
   IconExhibits,
   IconMoney,
-  IconPeople
+  IconPeople,
+  IconDownArrow
 } from "../components/icons";
 import Layout from "../components/layout";
 import PartnerCard from "../components/partner-card";
@@ -15,21 +16,32 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`stem`, `upper cumberland`, `cookeville`]} />
 
-    <Hero titleYear="2019" title="Invention Convention Partnership" />
+    <Hero titleYear="2019" title="Invention Convention Partners" />
 
     <section className="partnership-lead-section">
       <div>
         <h2>Become a Partner</h2>
         <p className="loud">
           Cookeville Children’s Museum is hosting the 3rd annual Invention
-          Convention.
+          Convention, Upper Cumberland’s premier S.T.E.M. event designed for
+          kids and their families.
+        </p>
+        <h3>Want to join us?</h3>
+        <p>
+          Pick a level and fill out the form below. If you would like to
+          continbute more, please send us an email at{" "}
+          <a href="mailto:partnership@inventionconventionuc.org">
+            partnership@inventionconventionuc.org
+          </a>
         </p>
         <p>
-          Upper Cumberland’s premier S.T.E.M. event designed to be free for kids
-          and their families.
-        </p>
-        <p>
-          Contributions to made directly benefit Cookeville Children’s Museum
+          Contributions directly benefit{" "}
+          <a
+            target="_blank"
+            href="https://www.facebook.com/CookevilleChildrensMuseum"
+          >
+            Cookeville Children’s Museum
+          </a>{" "}
           and are tax-deductible.
         </p>
       </div>
@@ -52,6 +64,9 @@ const IndexPage = () => (
             Rased over $13,000
           </li>
         </ul>
+        <a className="button" href="#partnerForm">
+          Become a Partner
+        </a>
       </div>
     </section>
     <section className="partnership-levels-section">
@@ -64,11 +79,11 @@ const IndexPage = () => (
           <li>Name printed on event materials</li>
           <li>Shout-outs on Social Media</li>
         </ul>
-        <button>Sign Me Up!</button>
       </PartnerCard>
       <PartnerCard
         levelName="Professor"
         levelAmount="$500"
+        earlyBirdAmount="$400"
         levelDescription="Great for companies or organizations that want to run their own hand-on exhibition booth or sponsor one of ours."
       >
         <ul>
@@ -79,11 +94,11 @@ const IndexPage = () => (
             Hands-on exhibition booth (run your own or sponsor one of ours)
           </li>
         </ul>
-        <button>Sign Me Up!</button>
       </PartnerCard>
       <PartnerCard
         levelName="Innovator"
         levelAmount="$750"
+        earlyBirdAmount="$650"
         levelDescription="Great for companies or organizations that want to be recognized as a financial partner"
       >
         <ul>
@@ -96,33 +111,14 @@ const IndexPage = () => (
           </li>
           <li>Space in lobby for promoting your organization </li>
         </ul>
-        <a className="button" href="#partnerForm">
-          Sign Me Up!
-        </a>
       </PartnerCard>
     </section>
-    <Form testFormProp="lorem ipsum" />
-    {/* <p>
-        Invention Convention is a free, educational S.T.E.M. event designed for
-        kids and their families!
-      </p>
-      <p>
-        We're hosting our third annual educational event designed for kids, ages
-        2-12, and their families! There will be hands-on activities, building
-        displays, competitions, and a robotics showcase.{" "}
-      </p>
+    <section className="partnership-sign-up-prompt">
+      <div>Sign Up Below</div>
+      <IconDownArrow />
+    </section>
 
-      <p>
-        We want to engage kids in science, technology, engineering, and math
-        (STEM) in the most fun way possible.
-      </p>
-
-      <p>
-        By offering free admission, we ensure that all children are able to
-        participate, regardless of their family’s socioeconomic background.
-      </p> */}
-
-    {/* <Form /> */}
+    <Form />
   </Layout>
 );
 

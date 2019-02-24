@@ -17,7 +17,7 @@
 
 .partner-card-header {
   background: $primary-color;
-  padding: 3rem 1rem;
+  padding: 3rem 0.5rem;
   text-align: center;
   p {
     font-size: $body-size-0;
@@ -27,17 +27,58 @@
 }
 
 .partner-card-level-name {
-  font-size: $body-size-0;
-  letter-spacing: 0.15em;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
 }
 
-.partner-card-level-amount {
+.partner-card-level-amount,
+.partner-card-early-bird-amount {
   font-family: $heading;
   font-size: $heading-size-1;
+  display: inline-block;
+  animation: priceMove 3s ease infinite alternate;
+
+  .partner-card-early-bird-amount ~ & {
+    font-size: $heading-size-0;
+    position: relative;
+    animation: none;
+
+    &::after {
+      content: "";
+      width: 140%;
+      height: 6px;
+      transform: rotate(-10deg);
+      background: $primary-compliment;
+      display: inline-block;
+      position: absolute;
+      left: -20%;
+      right: 0;
+      top: 0.4em;
+      border-radius: 2rem 1rem 2rem 1rem;
+    }
+  }
+}
+
+@keyframes priceMove {
+  from {
+    transform: rotate(-5deg);
+  }
+
+  to {
+    transform: rotate(5deg);
+  }
+}
+
+.early-bird-blurb {
+  margin-bottom: 1rem;
+  font-size: $body-size-0;
+  font-weight: 700;
 }
 
 .partner-card-body {
   padding: 2rem;
+  text-align: center;
 
   h3 {
     font-family: $heading;
@@ -47,6 +88,7 @@
   }
 
   li {
+    display: inline-block;
     font-size: $body-size-0;
   }
 

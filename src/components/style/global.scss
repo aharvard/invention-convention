@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: $body;
-
+  scroll-behavior: smooth;
   color: $dark-gray;
   background: $primary-color;
 }
@@ -60,16 +60,20 @@ section {
 ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
 }
 
 li {
   padding: 0;
-  margin-bottom: 1rem;
   display: inline-block;
   font-size: $body-size-1;
   line-height: 1.5;
   display: flex;
   align-items: center;
+
+  & + & {
+    margin-top: 1rem;
+  }
 
   .icon {
     margin-right: 1rem;
@@ -95,12 +99,13 @@ p + p {
 .loud {
   font-size: $body-size-2;
   font-weight: 200;
+  margin-bottom: 2rem;
 }
 
 button,
 .button {
   @include buttonColor($primary-compliment, white);
-
+  text-decoration: none;
   border: 3px solid $black;
   color: white;
   font-family: $heading;

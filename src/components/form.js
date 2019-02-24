@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { IconDownArrow } from "./icons";
+import { IconChevron } from "./icons";
 import "./style/form.scss";
 
-const Form = ({ testFormProp }) => {
+const Form = ({ partnerLevel }) => {
   const [formData, setFormData] = useState({
-    name: testFormProp,
-    level: "levelTwo",
+    name: "",
+    level: "",
     email: "",
     phone: ""
   });
@@ -49,7 +49,7 @@ const Form = ({ testFormProp }) => {
                 onChange={e => updateFormData(e)}
                 placeholder="Full Name"
                 type="text"
-                // required
+                required
               />
             </div>
 
@@ -62,7 +62,7 @@ const Form = ({ testFormProp }) => {
                 onChange={e => updateFormData(e)}
                 placeholder="hello@email.com"
                 type="email"
-                // required
+                required
               />
             </div>
 
@@ -96,9 +96,14 @@ const Form = ({ testFormProp }) => {
                   <option>Select a Level</option>
                   <option value="levelOne">$100 – Lab Rat</option>
                   <option value="levelTwo">$500 – Prodigy</option>
-                  <option value="levelThree">$750 – Professor</option>
+                  <option
+                    value="levelThree"
+                    selected={partnerLevel === "LevelThree" && true}
+                  >
+                    $750 – Professor
+                  </option>
                 </select>
-                <IconDownArrow />
+                <IconChevron />
               </div>
             </div>
             {level === "levelTwo" && (
