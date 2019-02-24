@@ -1,8 +1,8 @@
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 
-import "./style.scss";
+import "./style/partner-card.scss";
 
 const PartnerCard = ({
   levelName,

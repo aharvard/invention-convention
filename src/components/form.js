@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./style.scss";
+import "./style/form.scss";
 
-const Form = () => {
+const Form = ({ testFormProp }) => {
   const [formData, setFormData] = useState({
-    name: "",
+    name: testFormProp,
     level: "levelTwo",
     email: "",
     phone: ""

@@ -4,7 +4,7 @@ import React from "react";
 
 import "./style.scss";
 
-import Sparky from "../sparky";
+import Sparky from "./sparky";
 
 const Header = ({ siteTitle }) => (
   <header className="header">

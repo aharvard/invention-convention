@@ -1,10 +1,12 @@
 import React from "react";
 import Form from "../components/form";
 import Hero from "../components/hero";
-import IconAward from "../components/icons/IconAward";
-import IconExhibits from "../components/icons/IconExhibits";
-import IconMoney from "../components/icons/IconMoney";
-import IconPeople from "../components/icons/IconPeople";
+import {
+  IconAward,
+  IconExhibits,
+  IconMoney,
+  IconPeople
+} from "../components/Icons";
 import Layout from "../components/layout";
 import PartnerCard from "../components/partner-card";
 import SEO from "../components/seo";
@@ -94,10 +96,12 @@ const IndexPage = () => (
           </li>
           <li>Space in lobby for promoting your organization </li>
         </ul>
-        <button>Sign Me Up!</button>
+        <a className="button" href="#partnerForm">
+          Sign Me Up!
+        </a>
       </PartnerCard>
     </section>
-    <Form />
+    <Form testFormProp="lorem ipsum" />
     {/* <p>
         Invention Convention is a free, educational S.T.E.M. event designed for
         kids and their families!

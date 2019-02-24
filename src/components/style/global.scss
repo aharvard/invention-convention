@@ -96,7 +96,8 @@ p + p {
   font-weight: 200;
 }
 
-button {
+button,
+.button {
   background: $primary-compliment;
   border: 3px solid $black;
   color: white;

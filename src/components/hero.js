@@ -1,8 +1,8 @@
 import React from "react";
-import { ImageExhibitGym } from "../images";
-import Sparky from "../sparky/index";
+import { ImageExhibitGym } from "./images";
+import Sparky from "./sparky";
 
-import "./style.scss";
+import "./style/hero.scss";
 
 const Hero = ({ children, title, titleYear }) => (
   <div className="hero">
