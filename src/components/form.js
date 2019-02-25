@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { IconChevron, IconAward, IconPhoto } from "./icons";
-import bsCustomFileInput from "bs-custom-file-input";
+import { IconChevron, IconPhoto } from "./icons";
 import "./style/form.scss";
-import "./style/file-input.scss";
 
 const Form = () => {
   const [formData, setFormData] = useState({
