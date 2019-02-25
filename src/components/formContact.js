@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IconChevron, IconPhoto } from "./icons";
+import { IconChevron } from "./icons";
 import "./style/form.scss";
 
 const Form = () => {
