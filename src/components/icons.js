@@ -71,6 +71,33 @@ export const IconMoney = () => (
   </svg>
 );
 
+export const IconPhoto = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="icon"
+    height="1em"
+    width="1em"
+    viewBox="0 0 24 24"
+  >
+    <circle class="stroke" cx="17.25" cy="17.25" r="6" />
+    <line class="stroke" x1="17.25" y1="20.25" x2="17.25" y2="14.25" />
+    <line class="stroke" x1="17.25" y1="14.25" x2="15" y2="16.5" />
+    <line class="stroke" x1="17.25" y1="14.25" x2="19.5" y2="16.5" />
+    <path
+      class="stroke"
+      d="M8.25,20.25h-6a1.5,1.5,0,0,1-1.5-1.5V2.25A1.5,1.5,0,0,1,2.25.75H12.879a1.5,1.5,0,0,1,1.06.439l2.872,2.872a1.5,1.5,0,0,1,.439,1.06V8.25"
+    />
+    <path
+      class="stroke"
+      d="M5.25,5.625A.375.375,0,1,1,4.875,6a.375.375,0,0,1,.375-.375"
+    />
+    <path
+      class="stroke"
+      d="M12.085,9.586,11.25,8.25a.749.749,0,0,0-1.238-.014l-2,2.851L6.78,10.1a.75.75,0,0,0-1.093.169L3.75,14.25h4.5"
+    />
+  </svg>
+);
+
 export const IconExhibits = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

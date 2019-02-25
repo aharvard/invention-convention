@@ -1,10 +1,7 @@
-import React from "react";
+import { graphql, StaticQuery } from "gatsby";
 import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
-
+import React from "react";
 import Footer from "./footer";
-
-import "./style/remedy.scss";
 import "./style/global.scss";
 import "./style/sections.scss";
 

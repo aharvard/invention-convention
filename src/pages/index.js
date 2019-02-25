@@ -1,124 +1,42 @@
-import React, { useState } from "react";
-import Form from "../components/form";
+import { Link } from "gatsby";
+import React from "react";
 import Hero from "../components/hero";
-import {
-  IconAward,
-  IconExhibits,
-  IconMoney,
-  IconPeople,
-  IconDownArrow
-} from "../components/icons";
 import Layout from "../components/layout";
-import PartnerCard from "../components/partner-card";
 import SEO from "../components/seo";
+import { IconExhibits, IconAward } from "../components/icons";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`stem`, `upper cumberland`, `cookeville`]} />
 
-    <Hero titleYear="2019" title="Invention Convention Partners" />
-
+    <Hero titleYear="2019" title="Invention Convention" />
     <section className="partnership-lead-section">
       <div>
-        <h2>Become a Partner</h2>
+        <h2>You're Invited!</h2>
+        <Link to="/partner-signup">Partner Signup</Link>
         <p className="loud">
           Cookeville Children’s Museum is hosting the 3rd annual Invention
           Convention, Upper Cumberland’s premier S.T.E.M. event designed for
           kids and their families.
         </p>
         <h3>Want to join us?</h3>
-        <p>
-          Pick a level and fill out the form below. If you would like to
-          continbute more, please send us an email at{" "}
-          <a href="mailto:partnership@inventionconventionuc.org">
-            partnership@inventionconventionuc.org
-          </a>
-        </p>
-        <p>
-          Contributions directly benefit{" "}
-          <a
-            target="_blank"
-            href="https://www.facebook.com/CookevilleChildrensMuseum"
-          >
-            Cookeville Children’s Museum
-          </a>{" "}
-          and are tax-deductible.
-        </p>
       </div>
       <div>
-        <h3>Last Year</h3>
+        <h3>2019 Invention Convention</h3>
         <ul>
-          <li>
-            <IconPeople />
-            Over 400 people attended
-          </li>
+          <li>Free Admission!</li>
           <li>
             <IconExhibits />
-            10 hands-on exhibits
+            Interact with 10 hands-on Exhibits
           </li>
           <li>
-            <IconAward />4 competitions
+            <IconAward />Compete in any of our 4 competitions
           </li>
-          <li>
-            <IconMoney />
-            Rased over $13,000
-          </li>
+          <li>Hosted at the Tennessee Tech Fitness Center</li>
+          <li>Saturday July 27, 2019 — 10am to 2pm</li>
         </ul>
-        <a className="button" href="#partnerForm">
-          Become a Partner
-        </a>
       </div>
     </section>
-    <section className="partnership-levels-section">
-      <PartnerCard
-        levelName="Lab Rats"
-        levelAmount="$100"
-        levelDescription="Perfect for individuals who want to help promote S.T.E.M. to kids."
-      >
-        <ul>
-          <li>Name printed on event materials</li>
-          <li>Shout-outs on Social Media</li>
-        </ul>
-      </PartnerCard>
-      <PartnerCard
-        levelName="Professor"
-        levelAmount="$500"
-        earlyBirdAmount="$400"
-        levelDescription="Great for companies or organizations that want to run their own hand-on exhibition booth or sponsor one of ours."
-      >
-        <ul>
-          <li>Name printed on event materials</li>
-          <li>Shout-outs on Social Media</li>
-          <li>Community outreach opportunity</li>
-          <li>
-            Hands-on exhibition booth (run your own or sponsor one of ours)
-          </li>
-        </ul>
-      </PartnerCard>
-      <PartnerCard
-        levelName="Innovator"
-        levelAmount="$750"
-        earlyBirdAmount="$650"
-        levelDescription="Great for companies or organizations that want to be recognized as a financial partner"
-      >
-        <ul>
-          <li>Name (and logo) printed on event materials</li>
-          <li>Shoutouts on Social Media</li>
-          <li>Community outreach opportunity</li>
-          <li>
-            Event co-branding, associating your brand with the Invention
-            Convention
-          </li>
-          <li>Space in lobby for promoting your organization </li>
-        </ul>
-      </PartnerCard>
-    </section>
-    <section className="partnership-sign-up-prompt">
-      <div>Sign Up Below</div>
-      <IconDownArrow />
-    </section>
-
-    <Form />
   </Layout>
 );
 

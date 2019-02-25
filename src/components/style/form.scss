@@ -13,7 +13,7 @@
     content: "";
     background: url(../../images/stem-background.svg);
     background-size: 400px;
-    opacity: 0.06;
+    opacity: 0.08;
     top: 0;
     left: 0;
     bottom: 0;
@@ -64,7 +64,8 @@
   margin-bottom: 1rem;
 
   input,
-  select {
+  select,
+  .file-input {
     width: 100%;
     padding: 1rem;
     font-size: 1.2rem;
@@ -156,4 +157,42 @@ fieldset {
       background: $primary-compliment;
     }
   }
+}
+
+.file-input {
+  padding: 1rem;
+  border-radius: 3px;
+  background: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+
+  * {
+    cursor: pointer;
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 3px $primary-compliment;
+  }
+
+  svg {
+    flex: 0 0 auto;
+    font-size: 3rem;
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+    .stroke {
+      stroke-width: 1.25px;
+    }
+  }
+
+  label {
+    margin-bottom: 1rem;
+  }
+}
+
+input[type="file"] {
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
 }

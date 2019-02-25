@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { IconChevron } from "./icons";
+import { IconChevron, IconAward, IconPhoto } from "./icons";
+import bsCustomFileInput from "bs-custom-file-input";
 import "./style/form.scss";
+import "./style/file-input.scss";
 
-const Form = ({ partnerLevel }) => {
+const Form = () => {
   const [formData, setFormData] = useState({
     name: "",
     level: "",
@@ -18,22 +20,15 @@ const Form = ({ partnerLevel }) => {
 
   const { name, level, email, phone } = formData;
 
-  const action = () => {
-    if (level === "levelOne") {
-      return `/page-2`;
-    }
-    return "";
-  };
-
   return (
     <div className="form-section-wrapper">
       <section>
-        <h2>Partner Signup</h2>
+        <h2>Partner with Us!</h2>
         <form
           name="partnerForm"
           method="post"
           data-netlify="true"
-          action={action}
+          action={`/success/${level}-signup`}
           id="partnerForm"
         >
           <div className="form-section">
@@ -94,25 +89,37 @@ const Form = ({ partnerLevel }) => {
                   required
                 >
                   <option>Select a Level</option>
-                  <option value="levelOne">$100 – Lab Rat</option>
-                  <option value="levelTwo">$500 – Prodigy</option>
-                  <option
-                    value="levelThree"
-                    selected={partnerLevel === "LevelThree" && true}
-                  >
-                    $750 – Professor
-                  </option>
+                  <option value="labrat">$100 – Lab Rat</option>
+                  <option value="professor">$400 – Professor</option>
+                  <option value="innovator">$650 – Innovator</option>
                 </select>
                 <IconChevron />
               </div>
             </div>
-            {level === "levelTwo" && (
-              <>
-                <div className="field">
-                  <label htmlFor="business">Business Name</label>
-                  <input id="business" type="business" name="business" />
-                </div>
 
+            <bsCustomFileInput />
+            {level === "labrat" && (
+              <>
+                <div className="file-input">
+                  <IconPhoto />
+                  <div>
+                    <label htmlFor="labRatPhoto">
+                      If you'd like, please upload a photo that we can share on
+                      social media
+                    </label>
+                    <input id="labRatPhoto" type="file" name="labRatPhoto" />
+                  </div>
+                </div>
+                <div className="check">
+                  <label htmlFor="noPhoto">
+                    I do not want to have any photo shared.
+                  </label>
+                  <input id="noPhoto" type="checkbox" name="noPhoto" />
+                </div>
+              </>
+            )}
+            {level === "professor" && (
+              <>
                 <fieldset>
                   <legend>Would you like to run your own exhibit booth?</legend>
 
@@ -153,8 +160,21 @@ const Form = ({ partnerLevel }) => {
                     </label>
                   </div>
                 </fieldset>
+                <div className="field">
+                  <label htmlFor="business">Business Name</label>
+                  <input id="business" type="text" name="business" />
+                </div>
+
+                <div className="field">
+                  <label htmlFor="labRatPhoto">
+                    If able, please provide a high-quality logo that we can use
+                    for print material
+                  </label>
+                  <input id="labRatPhoto" type="file" name="labRatPhoto" />
+                </div>
               </>
             )}
+            {level === "innovator" && <>levelThree</>}
           </div>
 
           <button type="submit">Submit & Make Payment</button>
