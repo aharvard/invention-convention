@@ -95,7 +95,6 @@ const Form = () => {
               </div>
             </div>
 
-            <bsCustomFileInput />
             {level === "labrat" && (
               <>
                 <div className="file-input">
