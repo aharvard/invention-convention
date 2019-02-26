@@ -170,7 +170,6 @@ const Form = () => {
                         type="file"
                         name="labRatPhoto"
                         onChange={e => updateFormData(e)}
-                        value={file}
                       />
                     </div>
                   </div>
