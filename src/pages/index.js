@@ -3,14 +3,20 @@ import React from "react";
 import Hero from "../components/hero";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { IconExhibits, IconAward } from "../components/icons";
+import {
+  IconExhibits,
+  IconAward,
+  IconTicket,
+  IconFitness,
+  IconDate
+} from "../components/icons";
 
 const IndexPage = () => (
-  <Layout>
+  <Layout className="home">
     <SEO title="Home" keywords={[`stem`, `upper cumberland`, `cookeville`]} />
 
     <Hero titleYear="2019" title="Invention Convention" />
-    <section className="partnership-lead-section">
+    <section className="invite-section">
       <div>
         <h2>You're Invited!</h2>
         <Link to="/partner-signup">Partner Signup</Link>
@@ -24,7 +30,10 @@ const IndexPage = () => (
       <div>
         <h3>2019 Invention Convention</h3>
         <ul>
-          <li>Free Admission!</li>
+          <li>
+            <IconTicket />
+            Free Admission!
+          </li>
           <li>
             <IconExhibits />
             Interact with 10 hands-on Exhibits
@@ -33,8 +42,14 @@ const IndexPage = () => (
             <IconAward />
             Compete in any of our 4 competitions
           </li>
-          <li>Hosted at the Tennessee Tech Fitness Center</li>
-          <li>Saturday July 27, 2019 — 10am to 2pm</li>
+          <li>
+            <IconFitness />
+            Hosted at the Tennessee Tech Fitness Center
+          </li>
+          <li>
+            <IconDate />
+            Saturday July 27, 2019 — 10am to 2pm
+          </li>
         </ul>
       </div>
     </section>

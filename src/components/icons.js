@@ -131,6 +131,83 @@ export const IconExhibits = () => (
   </svg>
 );
 
+export const IconTicket = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="icon"
+    height="1em"
+    width="1em"
+    viewBox="0 0 24 24"
+  >
+    <path
+      className="stroke"
+      d="M19.5,12.25a3.751,3.751,0,0,1,3.124-3.7.75.75,0,0,0,.626-.739V5.5A1.5,1.5,0,0,0,21.75,4H2.25A1.5,1.5,0,0,0,.75,5.5V7.813a.749.749,0,0,0,.626.739,3.751,3.751,0,0,1,0,7.4.75.75,0,0,0-.626.739V19a1.5,1.5,0,0,0,1.5,1.5h19.5a1.5,1.5,0,0,0,1.5-1.5V16.687a.749.749,0,0,0-.626-.739A3.751,3.751,0,0,1,19.5,12.25Z"
+    />
+    <line className="stroke" x1="15.75" y1="17.5" x2="15.75" y2="16" />
+    <line className="stroke" x1="15.75" y1="13" x2="15.75" y2="11.5" />
+    <line className="stroke" x1="15.75" y1="8.5" x2="15.75" y2="7" />
+    <line className="stroke" x1="8.25" y1="17.5" x2="8.25" y2="16" />
+    <line className="stroke" x1="8.25" y1="13" x2="8.25" y2="11.5" />
+    <line className="stroke" x1="8.25" y1="8.5" x2="8.25" y2="7" />
+  </svg>
+);
+
+export const IconDate = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="icon"
+    height="1em"
+    width="1em"
+    viewBox="0 0 24 24"
+  >
+    <path
+      className="stroke"
+      d="M8.25,17.25h-6a1.5,1.5,0,0,1-1.5-1.5v-12a1.5,1.5,0,0,1,1.5-1.5h13.5a1.5,1.5,0,0,1,1.5,1.5v4.5"
+    />
+    <line className="stroke" x1="0.75" y1="6.75" x2="17.25" y2="6.75" />
+    <line className="stroke" x1="5.25" y1="3.75" x2="5.25" y2="0.75" />
+    <line className="stroke" x1="12.75" y1="3.75" x2="12.75" y2="0.75" />
+    <circle className="stroke" cx="17.25" cy="17.25" r="6" />
+    <polyline
+      className="stroke"
+      points="19.902 17.25 17.25 17.25 17.25 14.599"
+    />
+  </svg>
+);
+
+export const IconFitness = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="icon"
+    height="1em"
+    width="1em"
+    viewBox="0 0 24 24"
+  >
+    <circle className="stroke" cx="12" cy="9.375" r="2.625" />
+    <path
+      className="stroke"
+      d="M3.765,9A10.648,10.648,0,0,0,6.24,15.416,7.582,7.582,0,0,0,9,17.32v5.93"
+    />
+    <path
+      className="stroke"
+      d="M18.079,6.158a1.5,1.5,0,0,0-.823,1.467c0,.036.243,3.644-1.7,5.759a4.538,4.538,0,0,1-1.13.866H9.575A4.6,4.6,0,0,1,8.457,13.4C6.5,11.278,6.74,7.689,6.746,7.62a1.5,1.5,0,0,0-.825-1.462"
+    />
+    <path
+      className="stroke"
+      d="M15,23.25V17.32a7.582,7.582,0,0,0,2.76-1.9A10.648,10.648,0,0,0,20.235,9"
+    />
+    <path className="stroke" d="M20.251,3.755a45.482,45.482,0,0,0-16.5,0" />
+    <path
+      className="stroke"
+      d="M23.25,5.25a1.5,1.5,0,0,1-3,0v-3a1.5,1.5,0,0,1,3,0Z"
+    />
+    <path
+      className="stroke"
+      d="M3.75,5.25a1.5,1.5,0,0,1-3,0v-3a1.5,1.5,0,0,1,3,0Z"
+    />
+  </svg>
+);
+
 export const IconDownArrow = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
