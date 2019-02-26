@@ -203,6 +203,21 @@ const Form = () => {
                       </select>
                     </div>
                   </div>
+                  <div className="file-input">
+                    <IconPhoto />
+                    <div>
+                      <label htmlFor="labRatPhoto">
+                        If you'd like, please upload a photo that we can share
+                        on social media (not required).
+                      </label>
+                      <input
+                        id="labRatPhoto"
+                        type="file"
+                        name="labRatPhoto"
+                        onChange={e => updateFormData(e)}
+                      />
+                    </div>
+                  </div>
 
                   {/* <fieldset>
                     <legend>
@@ -258,7 +273,7 @@ const Form = () => {
                 <div className={level === "levelThree" ? " " : " hidden"}>
                   <div className="file-input">
                     <IconPhoto />
-                    <div>
+                    {/* <div>
                       <label htmlFor="innovatorPhoto">
                         Please provide a high quality logo we can use on print
                         materials.
@@ -269,7 +284,7 @@ const Form = () => {
                         name="innovatorPhoto"
                         onChange={e => updateFormData(e)}
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
