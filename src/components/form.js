@@ -27,13 +27,31 @@ const Form = () => {
           name="partnerForm"
           method="post"
           data-netlify="true"
-          action={`/success/${level ? level : "labrat"}-signup`}
+          // action={`/success/${level ? level : "labrat"}-signup`}
+          action="https://www.paypal.com/cgi-bin/webscr"
           id="partnerForm"
         >
           <div className="form-section">
             <h3>1. Contact Info</h3>
 
+            {/* Hidden Netlify  */}
             <input type="hidden" name="form-name" value="partnerForm" />
+
+            {/* PayPal Hidden Fields */}
+            <input type="hidden" name="cmd" value="_donations" />
+            <input
+              type="hidden"
+              name="business"
+              value="andrew.t.harvard@gmail.com"
+            />
+            <input
+              type="hidden"
+              name="item_name"
+              value="Donation Description"
+            />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input type="hidden" name="tax" value="0" />
+            <input type="hidden" name="amount" value="100" />
 
             <div className="field">
               <label htmlFor="name">Your Name</label>
