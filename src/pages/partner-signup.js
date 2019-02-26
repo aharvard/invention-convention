@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-// import Form from "../components/form";
+import Form from "../components/form";
 import Hero from "../components/hero";
 import {
   IconAward,
@@ -123,7 +123,7 @@ const IndexPage = () => (
       <IconDownArrow />
     </section>
 
-    {/* <Form /> */}
+    <Form />
   </Layout>
 );
 

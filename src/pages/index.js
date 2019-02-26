@@ -4,14 +4,12 @@ import Hero from "../components/hero";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { IconExhibits, IconAward } from "../components/icons";
-import FormContact from "../components/formContact";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`stem`, `upper cumberland`, `cookeville`]} />
 
     <Hero titleYear="2019" title="Invention Convention" />
-    <FormContact />
     <section className="partnership-lead-section">
       <div>
         <h2>You're Invited!</h2>

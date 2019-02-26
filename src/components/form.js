@@ -31,7 +31,7 @@ const Form = () => {
         >
           <div className="form-section">
             <h3>1. Contact Info</h3>
-            <input type="hidden" name="partnerForm" value="partnerForm" />
+            <input type="hidden" name="form-name" value="partnerForm" />
 
             <div className="field">
               <label htmlFor="name">Your Name</label>
