@@ -17,7 +17,7 @@ const Form = () => {
       [event.target.name]: event.target.value
     });
 
-  const { name, level, email, phone } = formData;
+  const { name, level, email, phone, businessName } = formData;
 
   return (
     <div className="form-section-wrapper">
