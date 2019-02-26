@@ -8,7 +8,7 @@ const Form = () => {
     level: "",
     email: "",
     phone: "",
-    businessName: "test"
+    businessName: ""
   });
 
   const updateFormData = event =>
@@ -32,6 +32,7 @@ const Form = () => {
         >
           <div className="form-section">
             <h3>1. Contact Info</h3>
+
             <input type="hidden" name="form-name" value="partnerForm" />
 
             <div className="field">
@@ -96,6 +97,25 @@ const Form = () => {
               </div>
             </div>
 
+            <div
+              className={
+                level === "professor"
+                  ? "field "
+                  : level === "innovator"
+                  ? "field "
+                  : "field hidden"
+              }
+            >
+              <label htmlFor="business">Business/Organization Name</label>
+              <input
+                id="business"
+                name="businessName"
+                value={businessName}
+                onChange={e => updateFormData(e)}
+                type="text"
+              />
+            </div>
+
             {/* labrat section */}
             <div className={level === "labrat" ? " " : " hidden"}>
               <div className="file-input">
@@ -103,16 +123,10 @@ const Form = () => {
                 <div>
                   <label htmlFor="labRatPhoto">
                     If you'd like, please upload a photo that we can share on
-                    social media
+                    social media (not required).
                   </label>
                   <input id="labRatPhoto" type="file" name="labRatPhoto" />
                 </div>
-              </div>
-              <div className="check">
-                <label htmlFor="noPhoto">
-                  I do not want to have any photo shared.
-                </label>
-                <input id="noPhoto" type="checkbox" name="noPhoto" />
               </div>
             </div>
 
@@ -130,7 +144,7 @@ const Form = () => {
                     value="email"
                   />
                   <label htmlFor="contactChoice1">
-                    Yes, I will run my own exhibit booth.
+                    Yes, I'll run my own exhibit booth.
                   </label>
                 </div>
 
@@ -142,8 +156,7 @@ const Form = () => {
                     value="phone"
                   />
                   <label htmlFor="contactChoice2">
-                    No, I would like Invention Convention to manage a booth for
-                    me
+                    No, I'd like Invention Convention to manage a booth for me.
                   </label>
                 </div>
 
@@ -155,46 +168,32 @@ const Form = () => {
                     value="mail"
                   />
                   <label htmlFor="contactChoice3">
-                    I don't know. Please reach out to me discuss!
+                    Not sure, I'd like to get some more info.
                   </label>
                 </div>
               </fieldset>
-
-              <div className="field">
-                <label htmlFor="business">Business Name</label>
-                <input
-                  id="business"
-                  name="businessName"
-                  value={businessName}
-                  onChange={e => updateFormData(e)}
-                  type="text"
-                />
-              </div>
-
-              <div className="field">
-                <label htmlFor="labRatPhoto">
-                  If able, please provide a high-quality logo that we can use
-                  for print material
-                </label>
-                <input id="labRatPhoto" type="file" name="labRatPhoto" />
-              </div>
             </div>
 
             <div className={level === "innovator" ? " " : " hidden"}>
-              <div className="field">
-                <label htmlFor="business">Business Name</label>
-                <input
-                  id="business"
-                  name="businessName"
-                  value={businessName}
-                  onChange={e => updateFormData(e)}
-                  type="text"
-                />
+              <div className="file-input">
+                <IconPhoto />
+                <div>
+                  <label htmlFor="innovatorPhoto">
+                    Please provide a high quality logo we can use on print
+                    materials.
+                  </label>
+                  <input
+                    id="innovatorPhoto"
+                    type="file"
+                    name="innovatorPhoto"
+                    onChange={e => updateFormData(e)}
+                  />
+                </div>
               </div>
             </div>
           </div>
 
-          <button type="submit">Submit & Make Payment</button>
+          <button type="submit">Submit & Make Donation</button>
         </form>
       </section>
     </div>
@@ -202,52 +201,3 @@ const Form = () => {
 };
 
 export default Form;
-
-// const Form = () => (
-//   <form
-//     name="partnerForm"
-//     method="post"
-//     data-netlify="true"
-//     action="/page-2/"
-//     id="partnerForm"
-//   >
-//     <input type="hidden" name="partnerForm" value="partnerForm" />
-//     <div className="field">
-//       <label htmlFor="name">Your Name</label>
-//       <input id="name" type="text" name="name" placeholder="First Last" />
-//     </div>
-
-//     <div className="field">
-//       <label htmlFor="email">Email</label>
-//       <input id="email" type="email" name="email" />
-//     </div>
-
-//     <div className="field">
-//       <label htmlFor="phone">Phone</label>
-//       <input id="phone" type="phone" name="phone" />
-//     </div>
-
-//     <div className="field">
-//       <label htmlFor="level">Partnership Level</label>
-//       <select id="level">
-//         <option value="100">$100</option>
-//         <option value="500">$500</option>
-//         <option value="750">$750</option>
-//       </select>
-//     </div>
-
-//     <div className="field">
-//       <label htmlFor="business">Business Name</label>
-//       <input id="business" type="business" name="business" />
-//     </div>
-
-//     <div className="field">
-//       <label htmlFor="logo">Company Logo</label>
-//       <input id="logo" type="file" name="logo" />
-//     </div>
-
-//     <button type="submit">Send</button>
-//   </form>
-// );
-
-// export default Form

@@ -2,11 +2,12 @@ import React from "react";
 import { Link } from "gatsby";
 
 import "./style/footer.scss";
+import Sparky from "./sparky";
 
 const Footer = () => (
   <footer>
-    <div>2019 Invention Convention</div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Sparky />
+    <p className="footer-name">2019 Invention Convention</p>
   </footer>
 );
 

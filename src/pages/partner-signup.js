@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import React from "react";
 import Form from "../components/form";
 import Hero from "../components/hero";
@@ -27,16 +27,14 @@ const IndexPage = () => (
           Convention, Upper Cumberland’s premier S.T.E.M. event designed for
           kids and their families.
         </p>
-        <p>
+        {/* <p>
           <Link to="/">Learn more about the 2019 Invention Convention</Link>
-        </p>
+        </p> */}
         <h3>Want to join us?</h3>
         <p>
-          Pick a level and fill out the form below. If you would like to
-          continbute more, please send us an email at{" "}
-          <a href="mailto:partnership@inventionconventionuc.org">
-            partnership@inventionconventionuc.org
-          </a>
+          We'd love to have you! Below you'll find a few contribution levels.
+          You can get started by filling out the form below. Afterwards, you'll
+          be prompted to give via PayPal.
         </p>
         <p>
           Contributions directly benefit{" "}
@@ -49,6 +47,9 @@ const IndexPage = () => (
           </a>{" "}
           and are tax-deductible.
         </p>
+        <a className="button" href="#partnerForm">
+          Sign Up
+        </a>
       </div>
       <div>
         <h3>Last Year</h3>
@@ -69,11 +70,9 @@ const IndexPage = () => (
             Rased over $13,000
           </li>
         </ul>
-        <a className="button" href="#partnerForm">
-          Become a Partner
-        </a>
       </div>
     </section>
+
     <section className="partnership-levels-section">
       <PartnerCard
         levelName="Lab Rats"
@@ -108,7 +107,7 @@ const IndexPage = () => (
       >
         <ul>
           <li>Name (and logo) printed on event materials</li>
-          <li>Shoutouts on Social Media</li>
+          <li>Shout-outs on Social Media</li>
           <li>Community outreach opportunity</li>
           <li>
             Event co-branding, associating your brand with the Invention
@@ -117,10 +116,6 @@ const IndexPage = () => (
           <li>Space in lobby for promoting your organization </li>
         </ul>
       </PartnerCard>
-    </section>
-    <section className="partnership-sign-up-prompt">
-      <div>Sign Up Below</div>
-      <IconDownArrow />
     </section>
 
     <Form />

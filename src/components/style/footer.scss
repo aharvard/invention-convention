@@ -1,9 +1,23 @@
 @import "./variables.scss";
 
 footer {
-  background: $primary-compliment;
-  color: white;
+  background: white;
+  // color: white;
   margin: 0;
   padding: 1rem;
   text-align: center;
+  padding: 1rem 0 5rem;
+}
+
+.sparky {
+  font-size: 10rem;
+  margin-top: -5rem;
+  margin-bottom: 2rem;
+  transform: translateX(-0.5rem);
+  z-index: 5;
+  position: relative;
+}
+
+.footer-name {
+  font-family: $heading;
 }

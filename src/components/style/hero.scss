@@ -23,11 +23,15 @@
 }
 
 .gatsby-image-wrapper {
-  height: 90vh;
+  height: 80vh;
   width: 100%;
 
   @media (max-height: 500px) {
     height: initial;
+  }
+
+  @media (max-width: 900px) {
+    height: 50vh;
   }
 }
 

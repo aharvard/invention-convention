@@ -24,7 +24,7 @@ const Form = () => {
           name="contactForm"
           method="post"
           data-netlify="true"
-          // action={`/success/${level}-signup`}
+          action={`/success/${level}-signup`}
           id="partnerForm"
         >
           <div className="form-section">

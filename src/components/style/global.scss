@@ -86,6 +86,7 @@ li {
 
 a {
   color: $primary-compliment;
+  font-weight: 600;
 }
 
 p {
@@ -128,5 +129,9 @@ button,
 
   &:active {
     transform: translateY(6px) translateX(6px);
+  }
+
+  p + & {
+    margin-top: 2rem;
   }
 }

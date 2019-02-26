@@ -29,6 +29,23 @@
 .partnership-sign-up-prompt {
   text-align: center;
   font-family: $heading;
-  font-size: $heading-size-1;
-  margin: 3rem auto;
+  font-size: $heading-size-0;
+
+  svg {
+    font-size: 5rem;
+    animation: bounce 500ms ease-out infinite alternate;
+
+    .stroke {
+      stroke-width: 0.5px;
+    }
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0rem);
+  }
+  from {
+    transform: translateY(1rem);
+  }
 }
