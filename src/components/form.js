@@ -95,6 +95,16 @@ const Form = () => {
                 <IconChevron />
               </div>
             </div>
+            <div className="field">
+              <label htmlFor="business">Business Name</label>
+              <input
+                id="business"
+                name="businessName"
+                value={businessName}
+                onChange={e => updateFormData(e)}
+                type="text"
+              />
+            </div>
 
             {level === "labrat" && (
               <>
@@ -158,16 +168,6 @@ const Form = () => {
                     </label>
                   </div>
                 </fieldset>
-                <div className="field">
-                  <label htmlFor="business">Business Name</label>
-                  <input
-                    id="business"
-                    name="businessName"
-                    value={businessName}
-                    onChange={e => updateFormData(e)}
-                    type="text"
-                  />
-                </div>
 
                 <div className="field">
                   <label htmlFor="labRatPhoto">
