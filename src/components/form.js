@@ -18,7 +18,8 @@ const Form = () => {
     phone: "",
     businessName: "",
     booth: "",
-    file: ""
+    socialMediafile: "",
+    logoFile: ""
   });
 
   const [formShowing, setFormShowing] = useState(true);
@@ -29,7 +30,16 @@ const Form = () => {
       [event.target.name]: event.target.value
     });
 
-  const { name, level, email, phone, businessName, booth, file } = formData;
+  const {
+    name,
+    level,
+    email,
+    phone,
+    businessName,
+    booth,
+    socialMediaFile,
+    logoFile
+  } = formData;
 
   const encode = data => {
     return Object.keys(data)
@@ -137,50 +147,58 @@ const Form = () => {
                   </div>
                 </div>
 
-                <div
-                  className={
-                    level === "professor"
-                      ? "field "
-                      : level === "innovator"
-                      ? "field "
-                      : "field hidden"
-                  }
-                >
-                  <label htmlFor="business">Business/Organization Name</label>
+                {level === "levelTwo" || level === "levelThree" ? (
+                  <div className="field">
+                    <label htmlFor="business">Business/Organization Name</label>
+                    <input
+                      id="business"
+                      name="businessName"
+                      value={businessName}
+                      onChange={e => updateFormData(e)}
+                      type="text"
+                    />
+                  </div>
+                ) : (
                   <input
-                    id="business"
+                    type="hidden"
                     name="businessName"
                     value={businessName}
-                    onChange={e => updateFormData(e)}
-                    type="text"
                   />
-                </div>
+                )}
 
                 {/* labrat section */}
-                <div className={level === "levelOne" ? " " : " hidden"}>
-                  <div className="file-input">
+
+                {level === "levelOne" ? (
+                  <div className="file-input" hidden={level !== "levelOne"}>
                     <IconPhoto />
                     <div>
-                      <label htmlFor="labRatPhoto">
-                        If you'd like, please upload a photo that we can share
-                        on social media (not required).
+                      <label htmlFor="socialMediaFile">
+                        LABRAT: If you'd like, please upload a photo that we can
+                        share on social media (not required).
                       </label>
                       <input
-                        id="labRatPhoto"
                         type="file"
-                        name="labRatPhoto"
+                        id="socialMediaFile"
+                        name="socialMediaFile"
                         onChange={e => updateFormData(e)}
+                        value={socialMediaFile}
                       />
                     </div>
                   </div>
-                </div>
+                ) : (
+                  <input
+                    type="hidden"
+                    name="socialMediaFile"
+                    value={socialMediaFile}
+                  />
+                )}
 
                 {/* professor section */}
 
-                <div className={level === "levelTwo" ? " " : " hidden"}>
+                {level === "levelTwo" ? (
                   <div className="field">
                     <label htmlFor="booth">
-                      Would you like to run your own exhibit booth?
+                      PROFESSOR: Would you like to run your own exhibit booth?
                     </label>
                     <div className="select">
                       <IconChevron />
@@ -203,91 +221,32 @@ const Form = () => {
                       </select>
                     </div>
                   </div>
+                ) : (
+                  <input type="hidden" name="booth" value={booth} />
+                )}
+
+                {/* INNOVATOR SECTION */}
+
+                {level === "levelThree" ? (
                   <div className="file-input">
                     <IconPhoto />
                     <div>
-                      <label htmlFor="labRatPhoto">
-                        If you'd like, please upload a photo that we can share
-                        on social media (not required).
+                      <label htmlFor="logoFile">
+                        INNOVATOR: Please provide a high quality logo we can use
+                        on print materials.
                       </label>
                       <input
-                        id="labRatPhoto"
+                        id="logoFile"
                         type="file"
-                        name="labRatPhoto"
+                        name="logoFile"
                         onChange={e => updateFormData(e)}
-                        value={file}
+                        value={logoFile}
                       />
                     </div>
                   </div>
-
-                  {/* <fieldset>
-                    <legend>
-                      Would you like to run your own exhibit booth?
-                    </legend>
-                    {radioSelection}
-
-                    <div className="radio">
-                      <input
-                        type="radio"
-                        id="exBooth1"
-                        name="exBooth"
-                        value="yes"
-                        checked={radioSelection === "yes"}
-                        onChange={handleRadioChange}
-                      />
-                      <label htmlFor="exBooth1">
-                        Yes, I'll run my own exhibit booth.
-                      </label>
-                    </div>
-
-                    <div className="radio">
-                      <input
-                        type="radio"
-                        id="exBooth2"
-                        name="exBooth"
-                        value="no"
-                        checked={radioSelection === "no"}
-                        onChange={handleRadioChange}
-                      />
-                      <label htmlFor="exBooth2">
-                        No, I'd like Invention Convention to manage a booth for
-                        me.
-                      </label>
-                    </div>
-
-                    <div className="radio">
-                      <input
-                        type="radio"
-                        id="exBooth3"
-                        name="exBooth"
-                        value="not sure"
-                        checked={radioSelection === "not sure"}
-                        onChange={handleRadioChange}
-                      />
-                      <label htmlFor="exBooth3">
-                        Not sure, I'd like to get some more info.
-                      </label>
-                    </div>
-                  </fieldset> */}
-                </div>
-
-                <div className={level === "levelThree" ? " " : " hidden"}>
-                  <div className="file-input">
-                    <IconPhoto />
-                    {/* <div>
-                      <label htmlFor="innovatorPhoto">
-                        Please provide a high quality logo we can use on print
-                        materials.
-                      </label>
-                      <input
-                        id="innovatorPhoto"
-                        type="file"
-                        name="innovatorPhoto"
-                        onChange={e => updateFormData(e)}
-                      />
-                    </div> */}
-                  </div>
-                </div>
+                ) : (
+                  <input type="hidden" name="logoFile" value={logoFile} />
+                )}
               </div>
 
               <button type="submit">Submit & Make Donation</button>
