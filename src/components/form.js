@@ -164,7 +164,12 @@ const Form = () => {
                         If you'd like, please upload a photo that we can share
                         on social media (not required).
                       </label>
-                      <input id="labRatPhoto" type="file" name="labRatPhoto" />
+                      <input
+                        id="labRatPhoto"
+                        type="file"
+                        name="labRatPhoto"
+                        onChange={e => updateFormData(e)}
+                      />
                     </div>
                   </div>
                 </div>
@@ -187,12 +192,9 @@ const Form = () => {
                         required
                       >
                         <option value="">Select an Option</option>
-                        <option value="yes">
-                          Yes, I'll run my own exhibit booth
-                        </option>
+                        <option value="yes">Yes!</option>
                         <option value="no">
-                          No, I'd like Invention Convention to manage a booth
-                          for me.
+                          No, please run a booth for me.
                         </option>
                         <option value="need info">
                           Not sure, I'd like to get some more info.
