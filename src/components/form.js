@@ -116,6 +116,23 @@ const Form = () => {
                     // required
                   />
                 </div>
+
+                <div className="file-input" hidden={level !== "levelOne"}>
+                  <IconPhoto />
+                  <div>
+                    <label htmlFor="socialMediaFile">
+                      LABRAT: If you'd like, please upload a photo that we can
+                      share on social media (not required).
+                    </label>
+                    <input
+                      type="file"
+                      id="socialMediaFile"
+                      name="socialMediaFile"
+                      onChange={e => updateFormData(e)}
+                      value={socialMediaFile}
+                    />
+                  </div>
+                </div>
               </div>
 
               <div className="form-section">
@@ -207,7 +224,7 @@ const Form = () => {
                         value={booth}
                         onChange={e => updateFormData(e)}
                         placeholder="Last name"
-                        name="booth"
+                        name="booth?"
                         required
                       >
                         <option value="">Select an Option</option>
