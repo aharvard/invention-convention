@@ -96,90 +96,102 @@ const Form = () => {
               </div>
             </div>
 
-            <div className={level === "professor" ? "field " : "field hidden"}>
-              <label htmlFor="business">Business Name</label>
-              <input
-                id="business"
-                name="businessName"
-                value={businessName}
-                onChange={e => updateFormData(e)}
-                type="text"
-              />
-            </div>
-
-            {level === "labrat" && (
-              <>
-                <div className="file-input">
-                  <IconPhoto />
-                  <div>
-                    <label htmlFor="labRatPhoto">
-                      If you'd like, please upload a photo that we can share on
-                      social media
-                    </label>
-                    <input id="labRatPhoto" type="file" name="labRatPhoto" />
-                  </div>
-                </div>
-                <div className="check">
-                  <label htmlFor="noPhoto">
-                    I do not want to have any photo shared.
-                  </label>
-                  <input id="noPhoto" type="checkbox" name="noPhoto" />
-                </div>
-              </>
-            )}
-            {level === "professor" && (
-              <>
-                <fieldset>
-                  <legend>Would you like to run your own exhibit booth?</legend>
-
-                  <div className="radio">
-                    <input
-                      type="radio"
-                      id="contactChoice1"
-                      name="contact"
-                      value="email"
-                    />
-                    <label htmlFor="contactChoice1">
-                      Yes, I will run my own exhibit booth.
-                    </label>
-                  </div>
-
-                  <div className="radio">
-                    <input
-                      type="radio"
-                      id="contactChoice2"
-                      name="contact"
-                      value="phone"
-                    />
-                    <label htmlFor="contactChoice2">
-                      No, I would like Invention Convention to manage a booth
-                      for me
-                    </label>
-                  </div>
-
-                  <div className="radio">
-                    <input
-                      type="radio"
-                      id="contactChoice3"
-                      name="contact"
-                      value="mail"
-                    />
-                    <label htmlFor="contactChoice3">
-                      I don't know. Please reach out to me discuss!
-                    </label>
-                  </div>
-                </fieldset>
-
-                <div className="field">
+            {/* labrat section */}
+            <div className={level === "labrat" ? " " : " hidden"}>
+              <div className="file-input">
+                <IconPhoto />
+                <div>
                   <label htmlFor="labRatPhoto">
-                    If able, please provide a high-quality logo that we can use
-                    for print material
+                    If you'd like, please upload a photo that we can share on
+                    social media
                   </label>
                   <input id="labRatPhoto" type="file" name="labRatPhoto" />
                 </div>
-              </>
-            )}
-            {level === "innovator" && <>levelThree</>}
+              </div>
+              <div className="check">
+                <label htmlFor="noPhoto">
+                  I do not want to have any photo shared.
+                </label>
+                <input id="noPhoto" type="checkbox" name="noPhoto" />
+              </div>
+            </div>
+
+            {/* professor section */}
+
+            <div className={level === "professor" ? " " : " hidden"}>
+              <fieldset>
+                <legend>Would you like to run your own exhibit booth?</legend>
+
+                <div className="radio">
+                  <input
+                    type="radio"
+                    id="contactChoice1"
+                    name="contact"
+                    value="email"
+                  />
+                  <label htmlFor="contactChoice1">
+                    Yes, I will run my own exhibit booth.
+                  </label>
+                </div>
+
+                <div className="radio">
+                  <input
+                    type="radio"
+                    id="contactChoice2"
+                    name="contact"
+                    value="phone"
+                  />
+                  <label htmlFor="contactChoice2">
+                    No, I would like Invention Convention to manage a booth for
+                    me
+                  </label>
+                </div>
+
+                <div className="radio">
+                  <input
+                    type="radio"
+                    id="contactChoice3"
+                    name="contact"
+                    value="mail"
+                  />
+                  <label htmlFor="contactChoice3">
+                    I don't know. Please reach out to me discuss!
+                  </label>
+                </div>
+              </fieldset>
+
+              <div className="field">
+                <label htmlFor="business">Business Name</label>
+                <input
+                  id="business"
+                  name="businessName"
+                  value={businessName}
+                  onChange={e => updateFormData(e)}
+                  type="text"
+                />
+              </div>
+
+              <div className="field">
+                <label htmlFor="labRatPhoto">
+                  If able, please provide a high-quality logo that we can use
+                  for print material
+                </label>
+                <input id="labRatPhoto" type="file" name="labRatPhoto" />
+              </div>
+            </div>
+
+            <div className={level === "innovator" ? " " : " hidden"}>
+              <div className="field">
+                <label htmlFor="business">Business Name</label>
+                <input
+                  id="business"
+                  name="businessName"
+                  value={businessName}
+                  onChange={e => updateFormData(e)}
+                  type="text"
+                />
+              </div>
+            </div>
           </div>
 
           <button type="submit">Submit & Make Payment</button>
