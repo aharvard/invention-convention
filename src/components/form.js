@@ -16,7 +16,8 @@ const Form = () => {
     level: "",
     email: "",
     phone: "",
-    businessName: ""
+    businessName: "",
+    exBooth: ""
   });
 
   const [formShowing, setFormShowing] = useState(true);
@@ -27,7 +28,7 @@ const Form = () => {
       [event.target.name]: event.target.value
     });
 
-  const { name, level, email, phone, businessName } = formData;
+  const { name, level, email, phone, businessName, businessName } = formData;
 
   const encode = data => {
     return Object.keys(data)
@@ -57,9 +58,6 @@ const Form = () => {
               name="partnerForm"
               method="post"
               data-netlify="true"
-              // action={`/success/${level ? level : "labrat"}-signup`}
-              // action="https://www.paypal.com/cgi-bin/webscr"
-              // action={setFormShowing(true)}
               id="partnerForm"
               onSubmit={handleSubmit}
             >
@@ -181,11 +179,11 @@ const Form = () => {
                     <div className="radio">
                       <input
                         type="radio"
-                        id="contactChoice1"
-                        name="contact"
-                        value="email"
+                        id="exBooth1"
+                        name="exBooth"
+                        value="yes"
                       />
-                      <label htmlFor="contactChoice1">
+                      <label htmlFor="exBooth1">
                         Yes, I'll run my own exhibit booth.
                       </label>
                     </div>
@@ -193,11 +191,11 @@ const Form = () => {
                     <div className="radio">
                       <input
                         type="radio"
-                        id="contactChoice2"
-                        name="contact"
-                        value="phone"
+                        id="exBooth2"
+                        name="exBooth"
+                        value="no"
                       />
-                      <label htmlFor="contactChoice2">
+                      <label htmlFor="exBooth2">
                         No, I'd like Invention Convention to manage a booth for
                         me.
                       </label>
@@ -206,11 +204,11 @@ const Form = () => {
                     <div className="radio">
                       <input
                         type="radio"
-                        id="contactChoice3"
-                        name="contact"
-                        value="mail"
+                        id="exBooth3"
+                        name="exBooth"
+                        value="need info"
                       />
-                      <label htmlFor="contactChoice3">
+                      <label htmlFor="exBooth3">
                         Not sure, I'd like to get some more info.
                       </label>
                     </div>
