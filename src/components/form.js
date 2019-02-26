@@ -17,6 +17,10 @@ const Form = () => {
       [event.target.name]: event.target.value
     });
 
+  const submitForm () => {
+    
+  }
+
   const { name, level, email, phone, businessName } = formData;
 
   return (
