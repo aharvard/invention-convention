@@ -27,7 +27,7 @@ const Form = () => {
           name="partnerForm"
           method="post"
           data-netlify="true"
-          action={`/success/labrat-signup`}
+          action={`/success/${level ? level : "labrat"}-signup`}
           id="partnerForm"
         >
           <div className="form-section">
@@ -88,7 +88,7 @@ const Form = () => {
                   name="level"
                   required
                 >
-                  <option>Select a Level</option>
+                  <option value="">Select a Level</option>
                   <option value="labrat">$100 – Lab Rat</option>
                   <option value="professor">$400 – Professor</option>
                   <option value="innovator">$650 – Innovator</option>
