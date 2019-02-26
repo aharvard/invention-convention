@@ -17,7 +17,8 @@ const Form = () => {
     email: "",
     phone: "",
     businessName: "",
-    boot: ""
+    booth: "",
+    file: ""
   });
 
   const [formShowing, setFormShowing] = useState(true);
@@ -28,7 +29,7 @@ const Form = () => {
       [event.target.name]: event.target.value
     });
 
-  const { name, level, email, phone, businessName, booth } = formData;
+  const { name, level, email, phone, businessName, booth, file } = formData;
 
   const encode = data => {
     return Object.keys(data)
@@ -169,6 +170,7 @@ const Form = () => {
                         type="file"
                         name="labRatPhoto"
                         onChange={e => updateFormData(e)}
+                        value={file}
                       />
                     </div>
                   </div>

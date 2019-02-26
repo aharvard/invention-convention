@@ -13,7 +13,10 @@ import SEO from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`stem`, `upper cumberland`, `cookeville`]} />
+    <SEO
+      title="Partner Signup"
+      keywords={[`stem`, `upper cumberland`, `cookeville`]}
+    />
 
     <Hero titleYear="2019" title="Invention Convention Partners" />
 
