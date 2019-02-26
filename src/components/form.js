@@ -95,7 +95,8 @@ const Form = () => {
                 <IconChevron />
               </div>
             </div>
-            <div className="field">
+
+            <div className={level === "professor" ? "field " : "field hidden"}>
               <label htmlFor="business">Business Name</label>
               <input
                 id="business"
