@@ -17,7 +17,7 @@ const Form = () => {
     email: "",
     phone: "",
     businessName: "",
-    exBooth: ""
+    exBooth: "no"
   });
 
   const [formShowing, setFormShowing] = useState(true);
@@ -182,6 +182,8 @@ const Form = () => {
                         id="exBooth1"
                         name="exBooth"
                         value="yes"
+                        checked={formData.exBooth === "yes"}
+                        onChange={e => updateFormData(e)}
                       />
                       <label htmlFor="exBooth1">
                         Yes, I'll run my own exhibit booth.
@@ -194,6 +196,8 @@ const Form = () => {
                         id="exBooth2"
                         name="exBooth"
                         value="no"
+                        checked={formData.exBooth === "no"}
+                        onChange={e => updateFormData(e)}
                       />
                       <label htmlFor="exBooth2">
                         No, I'd like Invention Convention to manage a booth for
@@ -207,6 +211,8 @@ const Form = () => {
                         id="exBooth3"
                         name="exBooth"
                         value="need info"
+                        checked={formData.exBooth === "not sure"}
+                        onChange={e => updateFormData(e)}
                       />
                       <label htmlFor="exBooth3">
                         Not sure, I'd like to get some more info.
