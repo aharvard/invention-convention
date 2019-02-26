@@ -79,20 +79,20 @@ export const IconPhoto = () => (
     width="1em"
     viewBox="0 0 24 24"
   >
-    <circle class="stroke" cx="17.25" cy="17.25" r="6" />
-    <line class="stroke" x1="17.25" y1="20.25" x2="17.25" y2="14.25" />
-    <line class="stroke" x1="17.25" y1="14.25" x2="15" y2="16.5" />
-    <line class="stroke" x1="17.25" y1="14.25" x2="19.5" y2="16.5" />
+    <circle className="stroke" cx="17.25" cy="17.25" r="6" />
+    <line className="stroke" x1="17.25" y1="20.25" x2="17.25" y2="14.25" />
+    <line className="stroke" x1="17.25" y1="14.25" x2="15" y2="16.5" />
+    <line className="stroke" x1="17.25" y1="14.25" x2="19.5" y2="16.5" />
     <path
-      class="stroke"
+      className="stroke"
       d="M8.25,20.25h-6a1.5,1.5,0,0,1-1.5-1.5V2.25A1.5,1.5,0,0,1,2.25.75H12.879a1.5,1.5,0,0,1,1.06.439l2.872,2.872a1.5,1.5,0,0,1,.439,1.06V8.25"
     />
     <path
-      class="stroke"
+      className="stroke"
       d="M5.25,5.625A.375.375,0,1,1,4.875,6a.375.375,0,0,1,.375-.375"
     />
     <path
-      class="stroke"
+      className="stroke"
       d="M12.085,9.586,11.25,8.25a.749.749,0,0,0-1.238-.014l-2,2.851L6.78,10.1a.75.75,0,0,0-1.093.169L3.75,14.25h4.5"
     />
   </svg>
@@ -141,15 +141,15 @@ export const IconDownArrow = () => (
   >
     <title>download-dash-arrow-1</title>
     <path
-      class="stroke"
+      className="stroke"
       d="M14.016,11.5V16h3.5c.55,0,.682.318.293.707l-5.585,5.586a1,1,0,0,1-1.415,0L5.224,16.707c-.389-.389-.258-.707.292-.707h3.5V11.5"
     />
-    <line class="stroke" x1="14.016" y1="9.5" x2="14.016" y2="7" />
-    <line class="stroke" x1="9.016" y1="9.5" x2="9.016" y2="7" />
-    <line class="stroke" x1="14.016" y1="5" x2="14.016" y2="3.5" />
-    <line class="stroke" x1="9.016" y1="5" x2="9.016" y2="3.5" />
-    <line class="stroke" x1="14.016" y1="1.5" x2="14.016" y2="1" />
-    <line class="stroke" x1="9.016" y1="1.5" x2="9.016" y2="1" />
+    <line className="stroke" x1="14.016" y1="9.5" x2="14.016" y2="7" />
+    <line className="stroke" x1="9.016" y1="9.5" x2="9.016" y2="7" />
+    <line className="stroke" x1="14.016" y1="5" x2="14.016" y2="3.5" />
+    <line className="stroke" x1="9.016" y1="5" x2="9.016" y2="3.5" />
+    <line className="stroke" x1="14.016" y1="1.5" x2="14.016" y2="1" />
+    <line className="stroke" x1="9.016" y1="1.5" x2="9.016" y2="1" />
   </svg>
 );
 

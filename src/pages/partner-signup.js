@@ -4,7 +4,6 @@ import Form from "../components/form";
 import Hero from "../components/hero";
 import {
   IconAward,
-  IconDownArrow,
   IconExhibits,
   IconMoney,
   IconPeople

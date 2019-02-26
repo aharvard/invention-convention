@@ -16,11 +16,16 @@ const Form = () => {
     level: "",
     email: "",
     phone: "",
-    businessName: "",
-    exBooth: "no"
+    businessName: ""
   });
 
   const [formShowing, setFormShowing] = useState(true);
+
+  const [radioSelection, updateRadioSelection] = useState("no");
+
+  const handleRadioChange = event => {
+    updateRadioSelection(event.target.value);
+  };
 
   const updateFormData = event =>
     setFormData({
@@ -28,7 +33,7 @@ const Form = () => {
       [event.target.name]: event.target.value
     });
 
-  const { name, level, email, phone, businessName, businessName } = formData;
+  const { name, level, email, phone, businessName } = formData;
 
   const encode = data => {
     return Object.keys(data)
@@ -175,6 +180,7 @@ const Form = () => {
                     <legend>
                       Would you like to run your own exhibit booth?
                     </legend>
+                    {radioSelection}
 
                     <div className="radio">
                       <input
@@ -182,8 +188,8 @@ const Form = () => {
                         id="exBooth1"
                         name="exBooth"
                         value="yes"
-                        checked={formData.exBooth === "yes"}
-                        onChange={e => updateFormData(e)}
+                        checked={radioSelection === "yes"}
+                        onChange={handleRadioChange}
                       />
                       <label htmlFor="exBooth1">
                         Yes, I'll run my own exhibit booth.
@@ -196,8 +202,8 @@ const Form = () => {
                         id="exBooth2"
                         name="exBooth"
                         value="no"
-                        checked={formData.exBooth === "no"}
-                        onChange={e => updateFormData(e)}
+                        checked={radioSelection === "no"}
+                        onChange={handleRadioChange}
                       />
                       <label htmlFor="exBooth2">
                         No, I'd like Invention Convention to manage a booth for
@@ -210,9 +216,9 @@ const Form = () => {
                         type="radio"
                         id="exBooth3"
                         name="exBooth"
-                        value="need info"
-                        checked={formData.exBooth === "not sure"}
-                        onChange={e => updateFormData(e)}
+                        value="not sure"
+                        checked={radioSelection === "not sure"}
+                        onChange={handleRadioChange}
                       />
                       <label htmlFor="exBooth3">
                         Not sure, I'd like to get some more info.

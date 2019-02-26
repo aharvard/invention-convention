@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import "./style/footer.scss";
 import Sparky from "./sparky";
