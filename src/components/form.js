@@ -7,7 +7,8 @@ const Form = () => {
     name: "",
     level: "",
     email: "",
-    phone: ""
+    phone: "",
+    businessName: "test"
   });
 
   const updateFormData = event =>
@@ -159,7 +160,13 @@ const Form = () => {
                 </fieldset>
                 <div className="field">
                   <label htmlFor="business">Business Name</label>
-                  <input id="business" type="text" name="business" />
+                  <input
+                    id="business"
+                    name="businessName"
+                    value={businessName}
+                    onChange={e => updateFormData(e)}
+                    type="text"
+                  />
                 </div>
 
                 <div className="field">
