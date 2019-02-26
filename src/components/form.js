@@ -16,16 +16,11 @@ const Form = () => {
     level: "",
     email: "",
     phone: "",
-    businessName: ""
+    businessName: "",
+    boot: ""
   });
 
   const [formShowing, setFormShowing] = useState(true);
-
-  const [radioSelection, updateRadioSelection] = useState("no");
-
-  const handleRadioChange = event => {
-    updateRadioSelection(event.target.value);
-  };
 
   const updateFormData = event =>
     setFormData({
@@ -33,7 +28,7 @@ const Form = () => {
       [event.target.name]: event.target.value
     });
 
-  const { name, level, email, phone, businessName } = formData;
+  const { name, level, email, phone, businessName, booth } = formData;
 
   const encode = data => {
     return Object.keys(data)
@@ -114,6 +109,7 @@ const Form = () => {
 
               <div className="form-section">
                 <h3>2. Partner Details</h3>
+
                 <div className="field">
                   <label htmlFor="level">Partnership Level</label>
                   <div className="select">
@@ -176,7 +172,36 @@ const Form = () => {
                 {/* professor section */}
 
                 <div className={level === "levelTwo" ? " " : " hidden"}>
-                  <fieldset>
+                  <div className="field">
+                    <label htmlFor="booth">
+                      Would you like to run your own exhibit booth?
+                    </label>
+                    <div className="select">
+                      <IconChevron />
+                      <select
+                        id="booth"
+                        value={booth}
+                        onChange={e => updateFormData(e)}
+                        placeholder="Last name"
+                        name="booth"
+                        required
+                      >
+                        <option value="">Select an Option</option>
+                        <option value="yes">
+                          Yes, I'll run my own exhibit booth
+                        </option>
+                        <option value="no">
+                          No, I'd like Invention Convention to manage a booth
+                          for me.
+                        </option>
+                        <option value="need info">
+                          Not sure, I'd like to get some more info.
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* <fieldset>
                     <legend>
                       Would you like to run your own exhibit booth?
                     </legend>
@@ -224,7 +249,7 @@ const Form = () => {
                         Not sure, I'd like to get some more info.
                       </label>
                     </div>
-                  </fieldset>
+                  </fieldset> */}
                 </div>
 
                 <div className={level === "levelThree" ? " " : " hidden"}>
