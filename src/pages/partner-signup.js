@@ -1,4 +1,4 @@
-// import { Link } from "gatsby";
+import { Link } from "gatsby";
 import React from "react";
 import Form from "../components/form";
 import Hero from "../components/hero";
@@ -22,6 +22,9 @@ const IndexPage = () => (
     <section className="partnership-lead-section">
       <div>
         <h2>Become a Partner</h2>
+        <Link to="/success/labrat-signup">LabRat Success</Link>
+        <Link to="/success/professor-signup">Professor Success</Link>
+        <Link to="/success/innovator-signup">Innovator Success</Link>
         <p className="loud">
           Cookeville Children’s Museum is hosting the 3rd annual Invention
           Convention, Upper Cumberland’s premier S.T.E.M. event designed for
